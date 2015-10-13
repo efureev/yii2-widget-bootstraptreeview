@@ -107,11 +107,13 @@ JS
 $items = [
     [
         'text' => 'Parent 1',
+        'def' => 'Description',
         'href' => Url::to(['', 'page' => 'parent1']),
         'nodes' => [
             [
                 'text' => 'Child 1',
                 'href' => Url::to(['', 'page' => 'child1']),
+                'tags' => [12],
                 'nodes' => [
                     [
                         'text' => 'Grandchild 1',
@@ -127,11 +129,32 @@ $items = [
     ],
 ];
 
+$onNodeHover = new \yii\web\JsExpression(<<<JS
+		function (undefined, item, tv) {
+			item.def = 'Description';
+			tv.treeview('redrawNode', item);
+		}
+JS
+	);
+
+	$onNodeLeave= new \yii\web\JsExpression(<<<JS
+function (undefined, item, tv) {
+		delete item.def;
+		tv.treeview('redrawNode', item);
+}
+JS
+	);
+
 echo TreeView::widget([
     'data' => $items,
     'size' => TreeView::SIZE_SMALL,
     'clientOptions' => [
         'onNodeSelected' => $onSelect,
+        'showTags' => true,
+		'showTips' => true,
+		'onNodeSelected' => $onSelect,
+		'onNodeHover' => $onNodeHover,
+		'onNodeLeave' => $onNodeLeave,
     ],
 ]);
 ```
