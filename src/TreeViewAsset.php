@@ -11,7 +11,7 @@ use yii\web\AssetBundle;
  */
 class TreeViewAsset extends AssetBundle
 {
-	public $sourcePath = '@vendor/efureev/yii2-widget-bootstraptreeview/assets';
+	public $sourcePath = '@efureev/widget/assets';
 	public $css = [
 		'css.css',
 	];
