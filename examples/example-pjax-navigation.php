@@ -1,7 +1,7 @@
 <?php
 use yii\widgets\Pjax;
 use yii\web\JsExpression;
-use execut\widget\TreeView;
+use efureev\widget\TreeView;
 Pjax::begin([
     'id' => 'pjax-container',
 ]);

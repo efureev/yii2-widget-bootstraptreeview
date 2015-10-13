@@ -1,5 +1,5 @@
 <?php
-use execut\widget\TreeView;
+use efureev\widget\TreeView;
 use yii\web\JsExpression;
 
 $items = [

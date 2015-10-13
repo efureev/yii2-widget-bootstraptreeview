@@ -1,8 +1,8 @@
 # Bootstrap Tree View widget wrapper for yii2
 
-[Widget page](https://github.com/jonmiles/bootstrap-treeview)
+[Widget page](https://github.com/efureev/bootstrap-treeview)
 
-![Bootstrap Tree View Default](https://raw.github.com/jonmiles/bootstrap-treeview/master/screenshot/default.PNG)
+![Bootstrap Tree View Default](https://raw.github.com/efureev/bootstrap-treeview/master/screenshot/default.PNG)
 
 ## Installation
 
@@ -13,13 +13,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-$ php composer.phar require execut/yii2-widget-bootstraptreeview "dev-master"
+$ php composer.phar require efureev/yii2-widget-bootstraptreeview "dev-master"
 ```
 
 or add
 
 ```
-"execut/yii2-widget-bootstraptreeview": "dev-master"
+"efureev/yii2-widget-bootstraptreeview": "dev-master"
 ```
 
 to the ```require``` section of your `composer.json` file.
